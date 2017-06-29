@@ -42,25 +42,26 @@ read_error = read_string("");
 
 if (read_error == OK) {
 	if (get_string_keyword(tempstring) == IC) {
-		read_error = read_double(dataptr+1, "initial condition", FALSE);
+//		read_error = read_double(dataptr+1, "initial condition", FALSE);
 	} else {
-		printf("## Warning -- illegal keyword %s\n", tempstring);
+//		printf("## Warning -- illegal keyword %s\n", tempstring);
 	}
 }
 
 if (bad_dev == FALSE) {
 	if (current_sub_def == NULL) {
 		name = add_realname(dev_name);
-		switch_to_devlist(name, SWITCH, nodeptr, dataptr);
+//		switch_to_devlist(name, SWITCH, nodeptr, dataptr);
 	} else {
-		switch_to_deftree(dev_name, SWITCH, nodeptr, dataptr);
+//		switch_to_deftree(dev_name, SWITCH, nodeptr, dataptr);
 	}
 
 } /* read switch */
 
+}
 //this is a device *, but I'm making it a void for now
 //device * 
-void switch_to_devlist(name, type, nodeptr, intptr, dataptr)
+/*void switch_to_devlist(name, type, nodeptr, intptr, dataptr)
 
 long name;
 int type;
@@ -70,7 +71,7 @@ double *dataptr;
 {
 //I'm into behaviours now
 }
-
+/*
 void switch_to_deftree(name, type, nodeptr, intptr, dataptr)
 
 char *dev_name;
@@ -79,4 +80,4 @@ long *nodeptr;
 long *intptr;
 double *dataptr;
 {
-}
+}*/

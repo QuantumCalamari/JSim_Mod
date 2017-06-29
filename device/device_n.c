@@ -26,13 +26,6 @@
 *  or implied warranty. No liability is accepted by the copyright    *
 *  holder for any use made of this software                          *
 **********************************************************************/
-/*********
-*
-* modified for voltage controlled switch July 2017
-* by Jon Collins (jon.collins@npl.co.uk)
-*
-*********/
-
 
 #include "jsim_n.h"
 #include "extern_n.h"
@@ -88,9 +81,7 @@ int type;
          return(search_name_dev(xline_array, xline_count, 
                                 temp_name->name));
 
-    case SWITCH :
-	return("this\0"); 
-	}   /* switch */
+  }   /* switch */
 
   return(NULL);
 
@@ -266,12 +257,6 @@ char *data;
          temp = sub_ckt_tail;
          sub_ckt_count++;
          break;
-
-    case SWITCH :
-	
-	if (sub_ckt == NULL) {
-		printf("testing the switch\n");
-	}
 
   }   /* switch */
 
